@@ -25,7 +25,7 @@ class Send1 extends Thread{
                 pw.println(str);
                 pw.flush();
                 if("exit".equals(str)){
-                    System.out.println("服务器断开连接");
+                    System.out.println("断开连接");
                     break;
                 }
             }
@@ -50,9 +50,9 @@ class Receive1 extends Thread{
         try (BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
             while (true) {
                 String str = br.readLine();
-                System.out.println("客户端：" + str);
+                System.out.println("对方说：" + str);
                 if ("exit".equals(str)) {
-                    System.out.println("客户端断开连接");
+                    System.out.println("断开连接");
                     break;
                 }
             }

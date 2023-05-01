@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Book {
     public static void main(String[] args) {
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter("e:/a.txt",true));
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter("e:/book.txt",true));
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             BufferedWriter bbw=new BufferedWriter(new OutputStreamWriter(System.out))){
             while(true) {
